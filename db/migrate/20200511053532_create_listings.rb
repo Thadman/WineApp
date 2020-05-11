@@ -9,7 +9,7 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.text :description
       t.string :alcohol
       t.string :size
-      t.string :type
+      t.string :wine_type
       t.integer :price
 
       t.timestamps
