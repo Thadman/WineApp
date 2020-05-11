@@ -33,6 +33,46 @@ RSpec.describe Listing, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'is not valid without a region' do
+    subject.region = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a grape' do
+    subject.region = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a vintage year' do
+    subject.vintage = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a alcohol' do
+    subject.alcohol = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a size' do
+    subject.size = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a wine type' do
+    subject.wine_type = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a note' do
+    subject.notes = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a description' do
+    subject.description = nil
+    expect(subject).to_not be_valid
+  end
+  
 end
 
 
