@@ -75,33 +75,29 @@ end
 def grapes 
 [
   {
+    grape_type: 'Champagne'
+  },
+  {
     grape_type: 'Barbera'
   },
-
   {
     grape_type: 'Burgundy'
   }, 
-
   {
     grape_type: 'Carménère'
   },
-
   {
     grape_type: 'Chianti'
   },
-
   { 
     grape_type: 'Grenache'
   }, 
-
   {
     grape_type: 'Moscato'
   },
-  
   { 
     grape_type: 'Petite Sirah'
   },
-
   {
     grape_type: 'Riesling'
   },
@@ -136,10 +132,6 @@ def grapes
 
   {
     grape_type: 'Pinot Grigio / Gris'
-  },
-
-  {
-    grape_type: 'Rosé Wine'
   },
 
   {
@@ -185,15 +177,10 @@ def grapes
   { 
     grape_type: 'Rioja'
   },
-  
-  { 
-    grape_type: 'Sparkling Wines'
-  },
 
   {
     grape_type: 'Sauternes'
   },
-  
   { 
     grape_type: 'Vino Nobile di Montepulciano' 
   }
@@ -207,20 +194,20 @@ def wine_type
 
 [
   {
-    name: 'Red',
+    name: 'Red'
   },
 
   {
-    name: 'White',
-  }
+    name: 'White'
+  },
 
   {
-    name: 'Sparkling',
-  }
+    name: 'Sparkling'
+  },
 
   {
     name: 'Rose'
-  }
+  },
 
   {
     name: 'Dessert'
