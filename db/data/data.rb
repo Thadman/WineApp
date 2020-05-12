@@ -72,120 +72,20 @@ def listing
 ]
 end
 
-def grapes 
-[
-  {
-    grape_type: 'Champagne'
-  },
-  {
-    grape_type: 'Barbera'
-  },
-  {
-    grape_type: 'Burgundy'
-  }, 
-  {
-    grape_type: 'Carménère'
-  },
-  {
-    grape_type: 'Chianti'
-  },
-  { 
-    grape_type: 'Grenache'
-  }, 
-  {
-    grape_type: 'Moscato'
-  },
-  { 
-    grape_type: 'Petite Sirah'
-  },
-  {
-    grape_type: 'Riesling'
-  },
-   
-  {
-    grape_type: 'Sauvignon Blanc'
-  },
+def grape_data 
+  [
+    {
+      grape_type: "Malbec"
+    },
 
-  {
-    grape_type: 'Blaufränkisch'
-  },
-  
-  { 
-    grape_type: 'Cabernet Franc'
-  },
-   
-  {
-    grape_type: 'Chardonnay'
-  },
-  
-  { 
-    grape_type: 'Gamay'
-  },
-  
-  {
-    grape_type: 'Grüner Veltliner'
-  },
+    {
+     grape_type: "Champagne" 
+    },
 
-  {
-    grape_type: 'Malbec'
-  },
-
-  {
-    grape_type: 'Pinot Grigio / Gris'
-  },
-
-  {
-    grape_type: 'Syrah & Shiraz'
-  },
-
-  {
-    grape_type: 'Zinfandel'
-  },
-   
-  {
-    grape_type: 'Bordeaux'
-  },
-  
-  { 
-    grape_type: 'Barolo'
-  },
-  
-  { 
-    grape_type: 'Cabernet Sauvignon'
-  },
-  
-  { 
-    grape_type: 'Chenin Blanc'
-  },
-  
-  { 
-    grape_type: 'Gewürztraminer'
-  },
-  
-  { 
-    grape_type: 'Merlot'
-  },
-  
-  { 
-    grape_type: 'Nebbiolo'
-  },
-  
-  { 
-    grape_type: 'Pinot Noir'
-  },
-  
-  { 
-    grape_type: 'Rioja'
-  },
-
-  {
-    grape_type: 'Sauternes'
-  },
-  { 
-    grape_type: 'Vino Nobile di Montepulciano' 
-  }
-
-  ] 
+    {
+      grape_type: "Riesling"
+    }
+  ]
 end
 
 

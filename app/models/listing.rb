@@ -9,6 +9,8 @@ class Listing < ApplicationRecord
   validates :size, presence: true
   validates :alcohol, presence: true
   validates :wine_type, presence: true
-  has_many :listing
+  belongs_to :user
+  has_many :grape_listings
+  has_many :grapes, through: :grape_listings 
 end
 

@@ -18,19 +18,19 @@ puts "seeded wines 🍷"
 
 puts "seeding grapes"
 
-grapes.each do |grape|
-  grape_record = Grape_type.create(grapes)
+grape_data.each do |grape|
+  grape_record = Grape.create(grape)
 end
 
 puts "seeded grapes 🍇"
 
-puts "seeding wine types"
+# puts "seeding wine types"
 
-wine_type.each do |wine|
-  wine_record = Wine_type.create(wines)
-end
+# wine_type.each do |wine|
+#   wine_record = Wine_type.create(wine)
+# end
 
-puts "seeded wine types"
+# puts "seeded wine types"
 
 
 
