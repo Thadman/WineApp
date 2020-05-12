@@ -10,7 +10,7 @@ user_two = User.create(name: 'Jane Doe', email: 'test-user2@wine.com', age: '19'
 
 puts "seeding wine listings"
 
-listing.each do |listing|
+listings.each do |listing|
   listing_record = Listing.create(listing)
 end
 
@@ -24,7 +24,7 @@ end
 
 puts "seeded grapes 🍇"
 
-# puts "seeding wine types"
+puts "seeding wine types"
 
 # wine_type.each do |wine|
 #   wine_record = Wine_type.create(wine)

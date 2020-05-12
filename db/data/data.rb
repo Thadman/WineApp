@@ -1,4 +1,4 @@
-def listing 
+def listings
 [
   {
     name: 'Penfolds',

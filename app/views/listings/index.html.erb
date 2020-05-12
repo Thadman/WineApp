@@ -1,0 +1,6 @@
+<h1> All Te Listings </h1>
+
+<% @listings.each do |listing| %>
+<p><%= link_to listing.name, listing_path(listing) %> : <% listing.vintage %></p>
+<% end %>
+
