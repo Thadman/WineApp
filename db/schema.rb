@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_11_053532) do
+ActiveRecord::Schema.define(version: 2020_05_12_014138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "grape_listings", force: :cascade do |t|
+    t.bigint "grape_id", null: false
+    t.bigint "listing_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["grape_id"], name: "index_grape_listings_on_grape_id"
+    t.index ["listing_id"], name: "index_grape_listings_on_listing_id"
+  end
+
+  create_table "grapes", force: :cascade do |t|
+    t.string "grape_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "listings", force: :cascade do |t|
     t.string "name"
@@ -30,4 +45,17 @@ ActiveRecord::Schema.define(version: 2020_05_11_053532) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "age"
+    t.string "email"
+    t.bigint "listing_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["listing_id"], name: "index_users_on_listing_id"
+  end
+
+  add_foreign_key "grape_listings", "grapes"
+  add_foreign_key "grape_listings", "listings"
+  add_foreign_key "users", "listings"
 end
