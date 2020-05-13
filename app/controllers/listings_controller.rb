@@ -1,6 +1,5 @@
 class ListingsController < ApplicationController
-  resources :listings
-  root to: 'welcome#index'
+  # root to: 'welcome#index'
 
   def index
     @listing = Listing.all
