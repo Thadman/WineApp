@@ -45,6 +45,15 @@
 </div>
 
 <div>
+  <%= form.collection_select(:wine_type_id, WineType.all, :id, :variety) %>
+</div>
+
+<div>
+  <%= form.label :picture %>
+  <%= form.file_field :picture, accept: "image/png,image/gif,image/jpeg,image/jpg" %>
+</div>
+
+<div>
   <%= form.submit %>
 </div>
 

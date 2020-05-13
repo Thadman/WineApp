@@ -13,5 +13,6 @@ class Listing < ApplicationRecord
   has_many :grape_listings
   has_many :grapes, through: :grape_listings 
   belongs_to :wine_type
+  has_one_attached :picture
 end
 
