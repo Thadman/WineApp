@@ -40,8 +40,7 @@
 </div>
 
 <div>
-  <%= form.label :grapes %>
-  <%= form.text_field :grapes %>
+  <%= form.collection_select(:grape_id, Grape.all, :id, :grape_type) %>
 </div>
 
 <div>
