@@ -17,3 +17,8 @@
 <div>
   <%= link_to 'Back, baby', listings_path %>
 </div>
+
+<div>
+  <%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: "Really want to delete #{@listing.name}?"} %>
+</div>
+
