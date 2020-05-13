@@ -23,6 +23,20 @@ end
 
 puts "seeded wines 🍷"
 
+# puts "seeding photos 📸"
+
+# listings.each do |listing| 
+#   random_num = rand(1..5)
+#   listing = Listing.create(listing)
+#   listing.picture.attach(
+#     io: File.open("app/assets/images/wine#{random_num}.png"),
+#     filename: "wine#{random_num}.png",
+#     content_type: "image/png"
+#   )
+# end
+
+# puts "seeded photos 📸"
+
 puts "seeding grapes"
 
 grape_data.each do |grape|
