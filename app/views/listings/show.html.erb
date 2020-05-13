@@ -1,5 +1,9 @@
 <h1>Show<h1>
 
+<div class="show-image">
+  <%= image_tag image_for(@listing), alt: "#{Listing.name} image"%>
+</div>
+
 <p><%= @listing.name %>
 <p><%= @listing.region %>
 <p><%= @listing.vintage%>
@@ -9,6 +13,7 @@
 <p><%= @listing.alcohol %>
 <p><%= @listing.size %>
 <p><%= @listing.price %>
+
 
 <div>
   <%= link_to 'Edit, baby', edit_listing_path(@listing) %>
