@@ -9,9 +9,7 @@ def listings
     description: 'Autumn and winter were dry and cool across South Australia. Record low rainfall prevailed through September to March, with some relief seen only in January and February ',
     alcohol: '14.5%', 
     size: '750ml', 
-    wine_type: 'Red',
-    price: 19,
-    user_id: 1
+    price: 19
   },
 
   {
@@ -23,9 +21,7 @@ def listings
     description: 'Autumn and winter were dry and cool across South Australia. Record low rainfall prevailed through September to March, with some relief seen only in January and February ',
     alcohol: '13.0%', 
     size: '750ml', 
-    wine_type: 'White',
-    price: 36,
-    user_id: 1
+    price: 36
   },
 
   {
@@ -37,9 +33,7 @@ def listings
     description: 'Bright in colour with a luminous golden yellow colour. Fine and persistent bubbles. A nose revealing the beauty and great complexity of this wine with notes of apples and pears ',
     alcohol: '12.5%', 
     size: '750ml', 
-    wine_type: 'Sparkling',
-    price: 75,
-    user_id: 1
+    price: 75
   },
 
   {
@@ -51,9 +45,7 @@ def listings
     description: '"100% grenache picked a little early. Light, bright magenta; totally delicious; very fruity, but bone dry',
     alcohol: '13.0%', 
     size: '750ml', 
-    wine_type: 'Rose',
-    price: 34,
-    user_id: 2
+    price: 34
   }, 
 
   {
@@ -65,9 +57,7 @@ def listings
     description: 'It balances rich and luscious marmalade and apricot decadence with a crisp, almost refreshing acidity in its finish. Perfect partner to chocolate fudge mug cake.',
     alcohol: '9.5%', 
     size: '375ml', 
-    wine_type: 'Dessert',
-    price: 39,
-    user_id: 2
+    price: 39
   }
 ]
 end
@@ -94,24 +84,25 @@ def wine_type
 
 [
   {
-    name: 'Red'
+    variety: 'Red'
   },
 
   {
-    name: 'White'
+    variety: 'White'
   },
 
   {
-    name: 'Sparkling'
+    variety: 'Sparkling'
   },
 
   {
-    name: 'Rose'
+    variety: 'Rose'
   },
 
   {
-    name: 'Dessert'
+    variety: 'Dessert'
   }
 ]
 
 end
+

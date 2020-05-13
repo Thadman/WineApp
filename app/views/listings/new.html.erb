@@ -1,1 +1,54 @@
-<h1>New</h1>
+<h1>New Wine</h1>
+
+<%= form_with model: @listing, local: true do |form| %>
+<div>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+
+<div>
+  <%= form.label :region %>
+  <%= form.text_field :region %>
+</div>
+
+<div>
+  <%= form.label :vintage %>
+  <%= form.text_field :vintage %>
+</div>
+
+<div>
+  <%= form.label :notes %>
+  <%= form.text_area :notes %>
+</div>
+
+<div>
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+</div>
+
+<div>
+  <%= form.label :alcohol %>
+  <%= form.text_field :alcohol %>
+</div>
+
+<div>
+  <%= form.label :size %>
+  <%= form.text_field :size %>
+</div>
+
+<div>
+  <%= form.label :price %>
+  <%= form.text_field :price %>
+</div>
+
+<div>
+  <%= form.label :grapes %>
+  <%= form.text_field :grapes %>
+</div>
+
+<div>
+  <%= form.submit %>
+</div>
+
+<% end %>
+

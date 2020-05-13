@@ -8,10 +8,17 @@ puts "seeding users"
 user_one = User.create(name: 'John Doe', email: 'test-user1@wine.com', age: '33')
 user_two = User.create(name: 'Jane Doe', email: 'test-user2@wine.com', age: '19')
 
+# wine_type.each do |wine|
+#   wine_record = WineType.create(wine)
+# end
 puts "seeding wine listings"
 
 listings.each do |listing|
-  listing_record = Listing.create(listing)
+  random_num = rand(1..5)
+  listing_record = Listing.new(listing)
+  listing_record.user_id = user_one.id
+  listing_record.wine_type_id = random_num
+  listing_record.save
 end
 
 puts "seeded wines 🍷"
@@ -26,11 +33,11 @@ puts "seeded grapes 🍇"
 
 puts "seeding wine types"
 
-# wine_type.each do |wine|
-#   wine_record = Wine_type.create(wine)
-# end
 
-# puts "seeded wine types"
+puts "seeded wine types"
+
+
+
 
 
 

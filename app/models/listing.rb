@@ -12,5 +12,6 @@ class Listing < ApplicationRecord
   belongs_to :user
   has_many :grape_listings
   has_many :grapes, through: :grape_listings 
+  belongs_to :wine_type
 end
 

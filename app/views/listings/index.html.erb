@@ -1,6 +1,7 @@
-<h1> All Te Listings </h1>
+<h1> All The Listings </h1>
+<%= link_to 'Add a new wine', new_listing_path %>
 
-<% @listings.each do |listing| %>
-<p><%= link_to listing.name, listing_path(listing) %> : <% listing.vintage %></p>
+
+<% @listing.each do |listing| %>
+<p><%= listing.name %> : <%= listing.region %></p>
 <% end %>
-

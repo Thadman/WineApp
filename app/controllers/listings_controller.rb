@@ -1,12 +1,11 @@
 class ListingsController < ApplicationController
-  # root to: 'welcome#index'
+  before_action :find_listing, only:[:show, :edit, :update]
 
   def index
     @listing = Listing.all
   end
 
   def show
-    @listing = listing.find(params[:id])
   end
 
   def new
@@ -20,12 +19,10 @@ class ListingsController < ApplicationController
     redirect_to @listing
   end
 
-  def edit 
-    @listing = Listing.find(params[:id])
+  def edit
   end
 
   def update
-    @listing = Listing.find(params[:id])
     @listing.update(listing_params)
 
     redirect_to @listing
@@ -40,9 +37,12 @@ class ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require(:listing).permit(:name, :vintage, :region, :grape, :notes, :description, :alcohol, :size, :wine_type, :price)
+    params.require(:listing).permit(:name, :vintage, :region, :grape, :notes, :description, :alcohol, :size, :price)
   end
 
-  
+  def find_listing
+    @listing = Listing.find(params[:id])
+  end
+
 end
 
