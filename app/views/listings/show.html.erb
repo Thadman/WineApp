@@ -10,3 +10,10 @@
 <p><%= @listing.size %>
 <p><%= @listing.price %>
 
+<div>
+  <%= link_to 'Edit, baby', edit_listing_path(@listing) %>
+</div>
+
+<div>
+  <%= link_to 'Back, baby', listings_path %>
+</div>
