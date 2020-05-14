@@ -94,3 +94,4 @@ ActiveRecord::Schema.define(version: 2020_05_14_042518) do
   add_foreign_key "listings", "users"
   add_foreign_key "listings", "wine_types"
 end
+

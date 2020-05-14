@@ -1,6 +1,9 @@
 class ListingsController < ApplicationController
+  
   before_action :find_listing, only:[:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user! , except: [:index, :show]
+  load_and_authorize_resource
+
 
   def index
     @listing = Listing.all
@@ -18,13 +21,20 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     @listing.grape_listings.build(grape_id: params[:listing][:grape_id])
     @listing.wine_type_id = params[:listing][:wine_type_id]
-    p @listing.errors.full_messages
+    # p @listing.errors.full_messages
     if @listing.save
       redirect_to @listing
     else
       render :new
     end
 
+    if @listing.errors.any?
+      render :new
+    else
+      flash[:success] = "You successfully created a new listing!"
+      @listing.save
+      redirect_to @listing
+    end
 
   end
 
