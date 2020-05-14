@@ -1,3 +1,3 @@
 class Grape < ApplicationRecord
-  has_many :grapes 
+  has_many :grape_listings
 end

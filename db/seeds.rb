@@ -1,23 +1,29 @@
 require_relative "data/data"
 
 Listing.destroy_all
+Grape.destroy_all
+WineType.destroy_all
 User.destroy_all
 
 puts "seeding users"
 
-user_one = User.create(name: 'John Doe', email: 'test-user1@wine.com', age: '33')
-user_two = User.create(name: 'Jane Doe', email: 'test-user2@wine.com', age: '19')
+user_one = User.create(name: 'John Doe', email: 'test-user1@wine.com', age: '33', password: 'password')
+user_two = User.create(name: 'Jane Doe', email: 'test-user2@wine.com', age: '19', password: 'password')
 
-# wine_type.each do |wine|
-#   wine_record = WineType.create(wine)
-# end
+wine_type.each do |wine|
+  wine_record = WineType.create(wine)
+end
+
+
 puts "seeding wine listings"
 
 listings.each do |listing|
+p listing
   random_num = rand(1..5)
   listing_record = Listing.new(listing)
   listing_record.user_id = user_one.id
   listing_record.wine_type_id = random_num
+ p listing_record.errors.full_messages
   listing_record.save
 end
 

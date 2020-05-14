@@ -14,12 +14,17 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
-    
+    @listing.user = current_user
+    @listing.grape_listings.build(grape_id: params[:listing][:grape_id])
+    @listing.wine_type_id = params[:listing][:wine_type_id]
+    p @listing.errors.full_messages
     if @listing.save
       redirect_to @listing
     else
       render :new
     end
+
+
   end
 
   def edit
