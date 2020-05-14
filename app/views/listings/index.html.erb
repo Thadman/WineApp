@@ -5,5 +5,5 @@
 
 
 <% @listing.each do |listing| %>
-<p><%= listing.name %> : <%= listing.region %></p>
+<p><%= link_to listing.name, listing_path(listing) %> : <%= listing.region %></p>
 <% end %>

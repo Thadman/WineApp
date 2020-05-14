@@ -19,10 +19,10 @@ puts "seeding wine listings"
 
 listings.each do |listing|
 p listing
-  random_num = rand(1..5)
+  # random_num = rand(1..5)
   listing_record = Listing.new(listing)
   listing_record.user_id = user_one.id
-  listing_record.wine_type_id = random_num
+  listing_record.wine_type_id = WineType.first.id
  p listing_record.errors.full_messages
   listing_record.save
 end

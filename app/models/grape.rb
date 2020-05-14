@@ -1,3 +1,3 @@
 class Grape < ApplicationRecord
-  has_many :grape_listings
+  has_many :grape_listings, dependent: :destroy
 end
