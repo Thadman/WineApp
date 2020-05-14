@@ -40,7 +40,7 @@ class ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require(:listing).permit(:name, :vintage, :region, :notes, :description, :alcohol, :size, :price, :picture, :grape_id, :wine_type_id)
+    params.require(:listing).permit(:name, :vintage, :region, :notes, :description, :alcohol, :size, :price, :picture)
   end
 
   def find_listing
