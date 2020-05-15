@@ -1,4 +1,7 @@
 <%=  link_to "login", new_user_session_path %>
+<div>
+  <%= link_to 'Home', root_path  %>
+</div>
 
 <h1> All The Listings </h1>
 <%= link_to 'Add a new wine', new_listing_path %>
@@ -7,3 +10,4 @@
 <% @listing.each do |listing| %>
 <p><%= link_to listing.name, listing_path(listing) %> : <%= listing.region %></p>
 <% end %>
+

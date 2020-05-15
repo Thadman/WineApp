@@ -22,29 +22,26 @@ class ListingsController < ApplicationController
     @listing.grape_listings.build(grape_id: params[:listing][:grape_id])
     @listing.wine_type_id = params[:listing][:wine_type_id]
     # p @listing.errors.full_messages
-    if @listing.save
-      redirect_to @listing
-    else
-      render :new
-    end
-
-    if @listing.errors.any?
-      render :new
-    else
-      flash[:success] = "You successfully created a new listing!"
-      @listing.save
-      redirect_to @listing
-    end
-
+    
+      if @listing.errors.any?
+        render :new
+      else
+        flash[:success] = "You successfully created a new listing!"
+        @listing.save
+        redirect_to @listing
+      end
   end
 
+  
   def edit
   end
 
   def update
-    @listing.update(listing_params)
-
-    redirect_to @listing
+    if @listing.update(listing_params)
+      redirect_to @listing
+    else
+      render :new
+    end
   end
 
   def destroy

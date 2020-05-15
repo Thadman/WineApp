@@ -1,9 +1,9 @@
 <h1>Show<h1>
 
 
-<div class="show-image">
+
   <%= image_tag picture_for(@listing), alt: "#{@listing.name} image"%>
-</div>
+
 
   <p><%= @listing.name %>
   <p><%= @listing.region %>
@@ -12,6 +12,7 @@
   <p><%= @listing.description %>
   <p><%= @listing.alcohol %>
   <p><%= @listing.size %>
+  <p><%= @listing.price%>
   <p><%= @listing.wine_type.variety %>
   <%# <p><%= @listing.grape.grape_type %> 
 
@@ -24,19 +25,8 @@
      <%= link_to "Edit", edit_listing_path(@listing.id) %>
      <%= link_to "Delete", listing_path(@listing.id), method: :delete %>
   <% end %>
-  <%= link_to "Back", :back %>
+  <%= link_to "Back", listings_path %>
  </div>
 
 
-<div>
-  <%= link_to 'Edit, baby', edit_listing_path(@listing) %>
-</div>
-
-<div>
-  <%= link_to 'Back, baby', listings_path %>
-</div>
-
-<div>
-  <%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: "Really want to delete #{@listing.name}?"} %>
-</div>
 
