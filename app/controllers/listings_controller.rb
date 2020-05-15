@@ -37,6 +37,12 @@ class ListingsController < ApplicationController
   end
 
   def update
+    grape = Grape.find(params[:listing][:grape_id])
+    unless @listing.grapes.pluck(:grape_type).include?(grape.grape_type)
+      @listing.grape_listings.build(grape_id: params[:listing][:grape_id])
+    end
+    @listing.wine_type_id = params[:listing][:wine_type_id]
+# p @listing
     if @listing.update(listing_params)
       redirect_to @listing
     else

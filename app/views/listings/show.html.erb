@@ -1,20 +1,20 @@
-<h1>Show<h1>
+<h1>your <%= "#{@listing.name}" %><h1>
 
 
 
   <%= image_tag picture_for(@listing), alt: "#{@listing.name} image"%>
 
 
-  <p><%= @listing.name %>
-  <p><%= @listing.region %>
-  <p><%= @listing.vintage%>
-  <p><%= @listing.notes %>
-  <p><%= @listing.description %>
-  <p><%= @listing.alcohol %>
-  <p><%= @listing.size %>
-  <p><%= @listing.price%>
-  <p><%= @listing.wine_type.variety %>
-  <%# <p><%= @listing.grape.grape_type %> 
+  <p><%= @listing.name %></p>
+  <p><%= @listing.region %></p>
+  <p><%= @listing.vintage%></p>
+  <p><%= @listing.notes %></p>
+  <p><%= @listing.description %></p>
+  <p><%= @listing.alcohol %></p>
+  <p><%= @listing.size %></p>
+  <p><%= @listing.price%></p>
+  <p><%= @listing.wine_type.variety %></p>
+  <p><%= @listing.grapes.map{|g| g.grape_type}.join(", ") %></p>
 
 
 
