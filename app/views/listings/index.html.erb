@@ -6,7 +6,12 @@
 <%= link_to 'Add a new wine', new_listing_path %>
 
 
-<% @listing.each do |listing| %>
-<p><%= link_to listing.name, listing_path(listing) %> : <%= listing.region %></p>
+<%# <p><%= link_to @listing.name, listing_path(listing) %>
+
+<div class="row-justify-center-around">
+  <% @listing.each do |listing| %>
+  <%= render 'card', listing: listing %>
 <% end %>
+
+</div>
 
