@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   resources :listings
   
   root to: 'welcome#index'
+
+  get '/search' => 'pages#search', as: 'search_page'
+
 end

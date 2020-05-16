@@ -14,4 +14,6 @@ class Listing < ApplicationRecord
   belongs_to :wine_type
   has_one_attached :picture
   belongs_to :user
+
+  
 end
