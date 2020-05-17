@@ -1,8 +1,11 @@
 <h2>Welcome <%= current_user.name %></h2>
-<div>
+
+<div class="row justify-content-around">
 <%= @listing.each do |listing| %>
+  <%= render 'card', listing: listing %>
   <%# <%= image_tag picture_for(@listing), size: '50x50', alt: "#{@listing.name} image" %> 
   <%= link_to 'Edit', edit_listing_path(listing) %>
   <%= link_to "Delete", listing_path(@listing), method: :delete %>
 <% end %>
 </div>
+
