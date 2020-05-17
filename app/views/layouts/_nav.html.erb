@@ -17,6 +17,7 @@
       <% if user_signed_in? %>
         <%= link_to 'Add to the Collection', new_listing_path, class: 'nav-item nav-link active' %>
         <%= link_to 'Our Wines', listings_path, class: 'nav-item nav-link active' %>
+        <%= link_to 'Your Profile', dashboard_index_path, class: 'nav-item nav-link active' %>
       <% end %> 
       <% unless user_signed_in? %>
         <%= link_to 'Register', new_user_registration_path, class: 'btn btn-outline-success ml-1' %>
