@@ -2,8 +2,7 @@
 
 <div class="row justify-content-around">
     <% @results.each do |result| %>  
-      <%# <%= render 'card', listing: listing %>
-      <%= result.name %><br> 
-      <%= result.vintage %><br> 
+      <ul><%= result.name %><br>
+      <%= result.vintage %><br> </ul>
     <% end %>
 </div>

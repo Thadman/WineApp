@@ -1,8 +1,9 @@
 <h2 class="text-center">Welcome <%= current_user.name %></h2>
 
 <div class="row justify-content-around">
-<%= @listing.each do |listing| %>
-  <%= render 'card', listing: listing %>
-<% end %>
+  <%= @listing.each do |listing| %>
+    <%= render 'card', listing: listing %>
+  <% end %>
 </div>
 
+<%= will_paginate @listing %>
