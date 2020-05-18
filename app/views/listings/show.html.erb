@@ -1,37 +1,36 @@
-
-  <div class="row">
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class=card-body>
+        <h5 class="card-title"><%= @listing.name %></h5>
+          <p class="card-text"><%= @listing.vintage %>
+          <%= image_tag picture_for(@listing), alt: "#{@listing.name} image", class: "card-img-top img_fluid" %>
+        </div>
+      </div>
+    </div>
     <div class="col-sm-6">
       <div class="card">
-        <div class=card-body>
-          <h5 class="card-title"><%= @listing.name %></h5>
-          <p class="card-text"><%= @listing.vintage %>
-          <%= image_tag picture_for(@listing), alt: "#{@listing.name} image"%>
-          </div>
+        <div class="card-body">
+          <p class="card-text"><%= @listing.region %></p>
+          <p class="card-text"><%= @listing.alcohol %></p>
+          <p class="card-text"><%= @listing.notes %></p>
+          <p class="card-text"><%= @listing.description %></p>
+          <p class="card-text"><%= @listing.alcohol %></p>
+          <p class="card-text"><%= @listing.size %></p>
+          <p class="card-text"><%= @listing.price %></p>
+          <p class="card-text"><%= @listing.wine_type.variety %></p>
+          <p class="card-text"><%= @listing.grapes.map{|g| g.grape_type}.join(", ") %></p>
+        <div class="show-edit-delete">
+          <% if can? :edit, @listing %>
+            <%= link_to "Edit", edit_listing_path(@listing.id) %>
+            <%= link_to "Delete", listing_path(@listing.id), method: :delete %>
+            <% end %>
+            <%= link_to "Back", listings_path %>
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <p class="card-text"><%= @listing.region %></p>
-            <p class="card-text"><%= @listing.alcohol %></p>
-            <p class="card-text"><%= @listing.notes %></p>
-            <p class="card-text"><%= @listing.description %></p>
-            <p class="card-text"><%= @listing.alcohol %></p>
-            <p class="card-text"><%= @listing.size %></p>
-            <p class="card-text"><%= @listing.price %></p>
-            <p class="card-text"><%= @listing.wine_type.variety %></p>
-            <p class="card-text"><%= @listing.grapes.map{|g| g.grape_type}.join(", ") %></p>
-            <div class="show-edit-delete">
-              <% if can? :edit, @listing %>
-                <%= link_to "Edit", edit_listing_path(@listing.id) %>
-                <%= link_to "Delete", listing_path(@listing.id), method: :delete %>
-              <% end %>
-              <%= link_to "Back", listings_path %>
-            </div>
-          </div>
-        </div>
-      </div>
-   </div>
+    </div>
+  </div>
+</div>
 
 
 
