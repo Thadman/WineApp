@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
   end
 
   def destroy
-    # @current_user = current_user.find(params[:id]).destroy
+    current_user.destroy
 
     redirect_to listings_path
   end

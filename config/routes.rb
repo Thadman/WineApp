@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :listings
   
-  resources :dashboard, only: [:index]
+  resources :dashboard, only: [:index, :destroy]
 
   root to: 'welcome#index'
 
