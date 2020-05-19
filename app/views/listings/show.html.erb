@@ -2,8 +2,7 @@
   <div class="col-sm-6">
     <div class="card">
       <div class=card-body>
-        <h5 class="card-title"><%= @listing.name %></h5>
-          <p class="card-text"><%= @listing.vintage %>
+        <h5 class="card-title text-center"><%= @listing.name %></h5>
           <%= image_tag picture_for(@listing), alt: "#{@listing.name} image", class: "card-img-top img_fluid" %>
         </div>
       </div>
@@ -11,6 +10,7 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
+          <p class="card-text"><%= @listing.vintage %>
           <p class="card-text"><%= @listing.region %></p>
           <p class="card-text"><%= @listing.alcohol %></p>
           <p class="card-text"><%= @listing.notes %></p>
