@@ -25,6 +25,16 @@ Tech Stack - The tech stack i used for this application was Ruby and Ruby on Rai
 
 # R12 - User stories for your app
 
+1. As a lister i want to be able to delete my listing item so that i can delete an old wine
+2. As a lister i want to be able to edit my listing item so that i can edit wine i may have made a mistake on
+3. As a browser i want to be able to search the site for wines so people can see my listings
+4. As a lister i want the ability to delete and edit to be hidden so people cant delete my item
+5. As a lister i want to be able to login for security reasons so i can feel safe with the listings
+6. As a browser i want to be able to make an account so i can join the online wine community
+7. As a lister i want to be able to add to my wine collection so i can keep track of my wines
+8. As a lister i want to be able to view all of my wines in a profile so i can get a visual representation of my wines
+9. As a lister i want to be be able to upload pictures so i can see the wine bottle
+10. As a lister i want to have attributes for my wine so i can correctly jot down them.
 
 
 # R13  - Wireframes for your app
