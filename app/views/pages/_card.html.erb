@@ -2,7 +2,7 @@
   <div class="card header">
     <h5><%= listing.name %></h5>
   </div>
-  <%= image_tag picture_for(listing) , alt: "#{listing.name} image", class: 'card-img-top img_fluid' %>
+  <%= image_tag picture_for(listing) , alt: "#{listing.name} image", class: 'card-img-top img_fluid card-picture' %>
   <div class="card-body">
     <h5 class="card-title"><%=  listing.name %></h5>
     <h6 class="card-subtitle mb-2 text-muted"><%= listing.region %></h6>

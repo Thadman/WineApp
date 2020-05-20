@@ -8,5 +8,5 @@
 </div>
 
 <h4 class="text-center">
-  <%= link_to "Delete Your Account", dashboard_path(@current_user.id), method: :delete, class: 'btn btn-danger' %>
+  <%= link_to "Delete Your Account", dashboard_path(@current_user.id), method: :delete, data: { confirm: "Really want to delete?" }, class: 'btn btn-danger' %>
 </div>
