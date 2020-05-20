@@ -47,5 +47,9 @@ Functionality / features - The functionality of this application is rather simpl
 Target Audience - The target audience for this web application is anyone who has a vested interest in wine and wants to keep track of their experience of each wine and keep i detail what they thought of it. It is not catered to people younger than 18 of course ! 
 Tech Stack - The tech stack i used for this application was Ruby and Ruby on Rails framework. I used Bootstrap for the front end, and CSS3 and HTML5. I used Heroku to deploy the application. For image upload i used an AWS  S3 bucket.
 
-# R12 
+# R12 - User stories for your app
+
+# R13  - Wireframes for your app
+
+
 
