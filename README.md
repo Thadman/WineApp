@@ -1,29 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 # R7 Identification of the problem you are trying to solve by building this particular marketplace app.
 
 Whilst thinking about implementing an app for this assignment , i wanted to help solve the problem that wine drinkers often have with their wines and keeping notes/description of the wines they have drunken and what they thought of the the particular wine and what the details of the specific wine were. I have had discussions with wine enthusiasts who have mentioned this and said that they kept notes, but mainly on Microsoft Excel, with no pictures and did not have the means to have it displayed in a manner that was more aesthetically pleasing. I ended up designing and implementing an app that adhered to this. I did not want, or did not implement a counter of each particular wine (something i can do in the future potentially) as i felt that the wine notes only applied to the singular bottle. 
@@ -50,6 +26,33 @@ Tech Stack - The tech stack i used for this application was Ruby and Ruby on Rai
 # R12 - User stories for your app
 
 # R13  - Wireframes for your app
+
+![](wireframe2.png)
+![](Wireframe1.png)
+![](wireframe4.png)
+![](wireframe5.png)
+![](wireframe6.png)
+![](wireframe7.png)
+![](wireframe8.png)
+
+# R14  - An ERD for your app
+
+![](Dbdiagram.png)
+
+# R15 - Explain the different high-level components (abstractions) in your app
+
+An example of a high-level component in my rails application is Active Record. Active record accounts for the M in MVC, which is the model. This is responsible for the representation of the data. Active Record takes the data which is stored within a database of columns and rows and allows you to manipulate or retrieve the data. This means we are able to query the database with eg. Wine.all as opposed to using a SQL query line SELECT * FROM wine. Wine.all will give me the ability to 'play with' the objects that are 'wine'. Active Record also allows us to create Ruby objects that will in fact represent a row in one of the databases you have created. The Active Record inherits from ActionRecord::Base, and all other models inherit from Active Record. 
+
+Another example of a high level component in Active Storage. Active storage allows for the uploading of files through a cloud storage system like the one used in this application (Amazon S3), it also attaches these files to the Ruby object. Through the use of Active storage in your Rails application you are able to uploads files and, if needed are able to generate representation of these.
+
+A last example of a high level component in a Ruby app is the Action Controller. This is Responsible for the C in MVC, and is the controller. The action controller is at the core of the request when it is made in the rails app. The controller is made up of at least one, amd potentially more actions. These actions determine what is happening by interacting with the Active Record and then rendering a template in which can be viewed, it is also possible that it redirects to another action as well. The Action Controller inherits from ActionController::Base, and the other controllers inherit from ApplicationController, this inturn gives you one class in which you can make configurations. 
+
+# R16 - Detail any third party services that your app will use
+
+
+
+
+
 
 
 
