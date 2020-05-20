@@ -49,10 +49,11 @@ A last example of a high level component in a Ruby app is the Action Controller.
 
 # R16 - Detail any third party services that your app will use
 
+For this project i used Devise for authentication, allowing me to get a user to sign up to the website. This means users are able to make profiles and look at the website. And have the knowledge in the fact that it is secure with the login. I used the Cancancan gem to ensure authorization of the website. Making sure that only the person who owns the particular listing can edit or delete the entry. I also used the paginate gem to ensure minimal scrolling on the page. I used Amazon S3 for the uploading of images to ensure that it does not 'bog' down the page loading speed, having to load all the files. 
 
+# R17 Describe your projects models in terms of the relationships (active record associations) they have with each other
 
+In my app i have 7 models, 6 of which are my own and 1 which inherits these (application_record). My first model i made was the listing model, this model has the attributes that a wine carries. This model has a connection with every other model i created. With these associations, it makes it possible to connect these models together and to make common operations easier within the code. The Listing model has many relationships. These include a belongs_to relationship with the User - because a User has_many listings and the listings belong_to the User. The listing also belongs_to a wine_type, and a wine_type has_many listings - i used this relationship because a wine can only be one type, but a type of wine can have many listings. (wine type in this case i have kept ot just Red, White, Sparkling, Rose, and Dessert). The Listing model also has_one_attached picture to allow for the uploading images to identify the wine. I also have a join table grapelistings, as a wine can have multiple grape varieties and a grape variety can also have many listings. This was important because wine is such a diverse field and it was essential to use this in the creating of a new listing. I also have the Ability model which is implemented when Cancancan was added. This allows for the restrictions that can be placed on a user when they are interacting with the website. 
 
-
-
-
+# R18 Discuss the database relations to be implemented in your application
 
