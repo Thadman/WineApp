@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @listing = current_user.listings.paginate(page: params[:page], per_page: 6)
+    @listing = current_user.listings
   end
 
   def destroy

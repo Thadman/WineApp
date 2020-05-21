@@ -1,8 +1,13 @@
 <h3 class="text-center">Search Results</h3>  
 
-<div class="row justify-content-around">
+<div class="search-results">
+
     <% @results.each do |result| %>  
-      <ul><%= result.name %><br>
-      <%= result.vintage %><br> </ul>
+      <div>
+      <%= link_to result.name, dashboard_index_path %>
+      </div>
+      <div>
+      <%= result.vintage %>
+      </div>
     <% end %>
 </div>

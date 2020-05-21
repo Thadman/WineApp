@@ -55,14 +55,3 @@ puts "seeding wine types"
 
 
 puts "seeded wine types"
-
-
-
-
-
-
-
-
-  
-
-
