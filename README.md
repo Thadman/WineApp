@@ -74,6 +74,8 @@ In my application i used 5 tables in my ERD which are using one of three databas
 # R19 Provide your database schema design
 
 ![](Dbdiagram.png)
+![](schema.png)
+
 
 # R20 Describe the way tasks are allocated and tracked in your project
 
