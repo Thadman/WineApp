@@ -10,7 +10,7 @@ class Listing < ApplicationRecord
   validates :wine_type, presence: true
   belongs_to :user
   has_many :grape_listings, dependent: :destroy
-  has_many :grapes, through: :grape_listings 
+  has_many :grapes, through: :grape_listings
   belongs_to :wine_type
   has_one_attached :picture
   # belongs_to :user

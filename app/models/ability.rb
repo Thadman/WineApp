@@ -9,4 +9,3 @@ class Ability
     can [:edit, :update, :destroy], Listing, user_id: user.id
   end
 end
-

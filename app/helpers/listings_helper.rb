@@ -1,5 +1,4 @@
 module ListingsHelper
-  
   def picture_for(listing)
     if listing.picture.present?
       listing.picture
@@ -7,5 +6,4 @@ module ListingsHelper
       'wine1.png'
     end
   end
-
 end
