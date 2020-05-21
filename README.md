@@ -61,7 +61,7 @@ A last example of a high level component in a Ruby app is the Action Controller.
 
 # R16 - Detail any third party services that your app will use
 
-For this project i used Devise for authentication, allowing me to get a user to sign up to the website. This means users are able to make profiles and look at the website. And have the knowledge in the fact that it is secure with the login. I used the Cancancan gem to ensure authorization of the website. Making sure that only the person who owns the particular listing can edit or delete the entry. I also used the paginate gem to ensure minimal scrolling on the page. I used Amazon S3 for the uploading of images to ensure that it does not 'bog' down the page loading speed, having to load all the files. 
+For this project i used Devise for authentication, allowing me to get a user to sign up to the website. This means users are able to make profiles and look at the website. And have the knowledge in the fact that it is secure with the login. I used the Cancancan gem to ensure authorization of the website. Making sure that only the person who owns the particular listing can edit or delete the entry. I also used the paginate gem to ensure minimal scrolling on the page. I used Amazon S3 for the uploading of images to ensure that it does not 'bog' down the page loading speed, having to load all the images.
 
 # R17 Describe your projects models in terms of the relationships (active record associations) they have with each other
 
