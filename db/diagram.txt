@@ -1,0 +1,39 @@
+Table listings {
+  id int [pk]
+  name string
+  vintage string
+  region string
+  grape string
+  notes text
+  description text
+  alcohol string
+  size string
+  type string
+  price int
+  user_id int [ref: > users.id]
+}
+
+Table users {
+  id int[pk]
+  full_name string
+  age string
+  email string
+}
+
+Table grapes {
+  id int
+  type string 
+  
+}
+
+Table grapelistings {
+  id int[pk]
+  grape_id int [ref: > grapes.id]
+  listing_id int [ref: > listings.id]
+}
+
+Table order {
+  id int[pk]
+  listing_id int [ref: > listings.id]
+  users_id int [ref: > users.id]
+}

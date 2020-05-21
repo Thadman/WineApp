@@ -73,6 +73,8 @@ In my application i used 5 tables in my ERD which are using one of three databas
 
 # R19 Provide your database schema design
 
+![](Dbdiagram.png)
+
 # R20 Describe the way tasks are allocated and tracked in your project
 
 Through the process of designing and coding this project, i used trello to ensure nothing was forgotten, and i could keep notes and tabs on what needed to be fixed, and what was completed. I also was able to have potential ideas on my trello board , that if i had time at the end i would be able to try and implement these functions. I had 5 columns which i labelled 'To Do, Doing, Done, but can come back, Done, Fixes/maybe do. With these i was able to keep track of my project and during the day was able to add and move 'cards' around to their correct position on the table. I took a screen shot at the end of each day (i will just add 4)
